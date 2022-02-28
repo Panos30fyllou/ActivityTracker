@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Activity Tracker</string>
+    <string name="login">Login</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
+    <string name="register">Register</string>
+    <string name="email">email</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="goToRegisterMessage">Don\'t have an account?\n Click here to register</string>
+    <string name="book_store_Title">Book Store</string>
+    <string name="goToLoginMessage">Already have an account?\n Click here to login</string>
+    <string name="app_logo_message">App Logo</string>
+    <string name="full_name">Full Name</string>
+    <string name="u_personal_info"><u>Personal Info</u></string>
+    <string name="u_account_info"><u>Account Info</u></string>
+    <string name="comments">Comments</string>
+    <string name="email_invalid">Email is invalid</string>
+    <string name="password_invalid_detailed">Password length must consist of 8 to 15 characters and contain at least one digit, special character, lowercase and uppercase letter and not contain any spaces</string>
+    <string name="username_invalid">Invalid username form</string>
+    <string name="username_invalid_detailed">Username must consist of 6 to 30 alphanumeric characters and underscores (_).</string>
+    <string name="password_invalid">Invalid password form</string>
+    <string name="passwords_dont_match">Passwords don\'t match</string>
+    <string name="registration_success">User has been registered</string>
+    <string name="registration_failed">Registration failed!</string>
+    <string name="logout">Logout</string>
+    <string name="monitor">Start Monitoring</string>
 </resources>
