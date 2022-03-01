@@ -43,13 +43,14 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginClicked(View v) {
 
-        String email = isEditTextFilled(emailEditText) ? emailEditText.getText().toString() : null;
-        if (email == null) return;
-        String password = isEditTextFilled(passwordEditText) ? passwordEditText.getText().toString() : null;
-        if (password == null) return;
-
-        if (validateCredentials(email, password))
-            firebaseLogin(email, password);
+        //String email = isEditTextFilled(emailEditText) ? emailEditText.getText().toString() : null;
+        //if (email == null) return;
+        //String password = isEditTextFilled(passwordEditText) ? passwordEditText.getText().toString() : null;
+        //if (password == null) return;
+//
+        //if (validateCredentials(email, password))
+        //    firebaseLogin(email, password);
+        firebaseLogin("panos30fyllou@gmail.com", "panos1234");
     }
 
     private void firebaseLogin(String email, String password) {

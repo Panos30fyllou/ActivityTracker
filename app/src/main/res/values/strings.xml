@@ -24,4 +24,17 @@
     <string name="registration_failed">Registration failed!</string>
     <string name="logout">Logout</string>
     <string name="monitor">Start Monitoring</string>
+    <string name="in_vehicle">In Vehicle</string>
+    <string name="on_bicycle">On Bicycle</string>
+    <string name="on_foot">On Foot</string>
+    <string name="running">Running</string>
+    <string name="still">Still</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown">Unknown</string>
+    <string name="walking">Walking</string>
+    <string name="unidentifiable_activity">Unidentifiable Activity</string>
+    <string name="activity_updates_enabled">activity_updates_enabled</string>
+    <string name="activity_updates_not_enabled">activity_updates_not_enabled</string>
+    <string name="activity_updates_removed">activity_updates_removed</string>
+    <string name="activity_updates_not_removed">activity_updates_not_removed</string>
 </resources>
