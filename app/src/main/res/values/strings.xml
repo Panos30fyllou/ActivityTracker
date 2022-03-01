@@ -37,4 +37,6 @@
     <string name="activity_updates_not_enabled">activity_updates_not_enabled</string>
     <string name="activity_updates_removed">activity_updates_removed</string>
     <string name="activity_updates_not_removed">activity_updates_not_removed</string>
+    <string name="percent">%1$d%%</string>
+    <string name="stop_monitoring">Stop Monitoring</string>
 </resources>
