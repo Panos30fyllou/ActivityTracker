@@ -1,10 +1,11 @@
-package com.example.activitytracker.activities;
+package com.example.activitytracker.services;
 
 import android.app.IntentService;
 import android.content.Intent;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
+import com.example.activitytracker.utils.Utils;
+import com.example.activitytracker.constants.Constants;
 import com.google.android.gms.location.ActivityRecognitionResult;
 import com.google.android.gms.location.DetectedActivity;
 
@@ -32,16 +33,7 @@ public class DetectedActivitiesIntentService extends IntentService {
 
         PreferenceManager.getDefaultSharedPreferences(this)
                 .edit()
-                .putString(Constants.KEY_DETECTED_ACTIVITIES,
-                        Utils.detectedActivitiesToJson(detectedActivities))
+                .putString(Constants.KEY_DETECTED_ACTIVITIES, Utils.detectedActivitiesToJson(detectedActivities))
                 .apply();
-
-        Log.i(TAG, "activities detected");
-        for (DetectedActivity da: detectedActivities) {
-            Log.i(TAG, Utils.getActivityString(
-                            getApplicationContext(),
-                            da.getType()) + " " + da.getConfidence() + "%"
-            );
-        }
     }
 }

@@ -11,7 +11,7 @@
             android:id="@+id/detected_activity_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/narrow_space"
+            android:layout_marginTop="5dp"
             android:text="@string/still" />
 
         <TextView
@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="@dimen/narrow_space" />
+            android:layout_marginTop="5dp" />
     </RelativeLayout>
 
     <ProgressBar
@@ -28,7 +28,8 @@
         style="@android:style/Widget.ProgressBar.Horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/progress_bar_top_margin"
-        android:minHeight="@dimen/progress_bar_min_height"
-        android:progress="1" />
+        android:layout_marginTop="5dp"
+        android:minHeight="5dp"
+        android:progress="1"
+        android:backgroundTint="@color/blue_500"/>
 </LinearLayout>

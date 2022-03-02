@@ -37,7 +37,7 @@
             android:exported="false"
             android:screenOrientation="portrait"/>
         <service
-            android:name=".activities.DetectedActivitiesIntentService"
+            android:name=".services.DetectedActivitiesIntentService"
             android:exported="false" />
     </application>
 </manifest>

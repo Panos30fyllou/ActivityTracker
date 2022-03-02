@@ -7,7 +7,6 @@
     <string name="email">email</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="goToRegisterMessage">Don\'t have an account?\n Click here to register</string>
-    <string name="book_store_Title">Book Store</string>
     <string name="goToLoginMessage">Already have an account?\n Click here to login</string>
     <string name="app_logo_message">App Logo</string>
     <string name="full_name">Full Name</string>
@@ -33,10 +32,12 @@
     <string name="unknown">Unknown</string>
     <string name="walking">Walking</string>
     <string name="unidentifiable_activity">Unidentifiable Activity</string>
-    <string name="activity_updates_enabled">activity_updates_enabled</string>
-    <string name="activity_updates_not_enabled">activity_updates_not_enabled</string>
-    <string name="activity_updates_removed">activity_updates_removed</string>
-    <string name="activity_updates_not_removed">activity_updates_not_removed</string>
+
+    <string name="activity_updates_enabled">Activity updates enabled</string>
+    <string name="activity_updates_not_enabled">Failed to enable activity updates</string>
+    <string name="activity_updates_removed">Activity updates removed</string>
+    <string name="activity_updates_not_removed">Failed to remove activity updates</string>
+
     <string name="percent">%1$d%%</string>
     <string name="stop_monitoring">Stop Monitoring</string>
 </resources>
