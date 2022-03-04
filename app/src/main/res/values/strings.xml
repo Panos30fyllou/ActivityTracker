@@ -40,4 +40,5 @@
 
     <string name="percent">%1$d%%</string>
     <string name="stop_monitoring">Stop Monitoring</string>
+    <string name="records_firebaseTableName">Records</string>
 </resources>
