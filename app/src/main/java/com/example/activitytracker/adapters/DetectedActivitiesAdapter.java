@@ -48,7 +48,6 @@ public class DetectedActivitiesAdapter extends ArrayAdapter<DetectedActivity> {
         if (view == null)
             view = LayoutInflater.from(getContext()).inflate(R.layout.detected_activity, parent, false);
 
-
         TextView activityName = view.findViewById(R.id.detected_activity_name);
         TextView activityConfidenceLevel = view.findViewById(R.id.detected_activity_confidence_level);
         ProgressBar progressBar = view.findViewById(R.id.detected_activity_progress_bar);

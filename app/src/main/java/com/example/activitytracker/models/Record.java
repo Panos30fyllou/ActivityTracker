@@ -1,66 +1,34 @@
 package com.example.activitytracker.models;
 
-import com.google.android.gms.location.DetectedActivity;
-
-import java.util.ArrayList;
-
 public class Record {
 
     private String Username;
-    private long InVehicle;
-    private long OnFoot;
-    private long OnBicycle;
-    private long Running;
-    private long Walking;
-    private long Still;
-    private long Unknown;
-    private long Unidentifiable;
-    private long Tilting;
-    private ArrayList<Long> Activities;
+    private long inVehicle;
+    private long onFoot;
+    private long onBicycle;
+    private long running;
+    private long walking;
+    private long still;
+    private long unknown;
+    private long unidentifiable;
+    private long tilting;
 
     public Record(){
-        this.Username = State.user.getUsername();
-        this.OnFoot = 0;
-        this.OnBicycle = 0;
-        this.Running = 0;
-        this.Still = 0;
-        this.Unknown = 0;
-        this.Walking = 0;
-        this.Unidentifiable = 0;
-        this.InVehicle = 0;
-        this.Tilting = 0;
 
     }
-    public Record(String username, long InVehicle, long OnFoot, long OnBicycle, long Running, long Still, long Unknown, long Walking, long Unidentifiable, long Tilting){
+    public Record(String username, long InVehicle, long OnFoot, long OnBicycle, long Running, long Still, long Unknown, long Walking, long Unidentifiable, long Tilting) {
         this.Username = username;
-        this.OnFoot = OnFoot;
-        this.OnBicycle = OnBicycle;
-        this.Running = Running;
-        this.Still = Still;
-        this.Unknown = Unknown;
-        this.Walking = Walking;
-        this.Unidentifiable = Unidentifiable;
-        this.InVehicle = InVehicle;
-        this.Tilting = Tilting;
+        this.onFoot = OnFoot;
+        this.onBicycle = OnBicycle;
+        this.running = Running;
+        this.still = Still;
+        this.unknown = Unknown;
+        this.walking = Walking;
+        this.unidentifiable = Unidentifiable;
+        this.inVehicle = InVehicle;
+        this.tilting = Tilting;
 
 
-
-        //this.Activities = new ArrayList<DetectedActivity>();
-        //Activities.add();
-        Activities.add(this.Unidentifiable);
-        Activities.add(this.InVehicle);
-        Activities.add(this.Running);
-        Activities.add(this.Still);
-        Activities.add(this.Unknown);
-        Activities.add(this.Walking);
-    }
-
-    public ArrayList<Long> getActivities() {
-        return Activities;
-    }
-
-    public void setActivities() {
-        this.Activities = new ArrayList<>();
     }
 
     public String getUsername() {
@@ -72,74 +40,74 @@ public class Record {
     }
 
     public long getInVehicle() {
-        return InVehicle;
+        return inVehicle;
     }
 
     public void setInVehicle(long inVehicle) {
-        this.InVehicle = inVehicle;
+        this.inVehicle = inVehicle;
     }
 
     public long getOnFoot() {
-        return OnFoot;
+        return onFoot;
     }
 
     public void setOnFoot(long onFoot) {
-        this.OnFoot = onFoot;
+        this.onFoot = onFoot;
     }
 
     public long getOnBicycle() {
-        return OnBicycle;
+        return onBicycle;
     }
 
     public void setOnBicycle(long onBicycle) {
-        OnBicycle = onBicycle;
+        this.onBicycle = onBicycle;
     }
 
     public long getRunning() {
-        return Running;
+        return running;
     }
 
     public void setRunning(long running) {
-        Running = running;
+        this.running = running;
     }
 
     public long getWalking() {
-        return Walking;
+        return walking;
     }
 
     public void setWalking(long walking) {
-        Walking = walking;
+        this.walking = walking;
     }
 
     public long getStill() {
-        return Still;
+        return still;
     }
 
     public void setStill(long still) {
-        Still = still;
+        this.still = still;
     }
 
     public long getUnknown() {
-        return Unknown;
+        return unknown;
     }
 
     public void setUnknown(long unknown) {
-        Unknown = unknown;
+        this.unknown = unknown;
     }
 
     public long getUnidentifiable() {
-        return Unidentifiable;
+        return unidentifiable;
     }
 
     public void setUnidentifiable(long unidentifiable) {
-        Unidentifiable = unidentifiable;
+        this.unidentifiable = unidentifiable;
     }
 
     public long getTilting() {
-        return Tilting;
+        return tilting;
     }
 
     public void setTilting(long tilting) {
-        Tilting = tilting;
+        this.tilting = tilting;
     }
 }

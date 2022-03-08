@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Activity Tracker</string>
+    <string name="login">Σύνδεση</string>
+    <string name="password">Κωδικός</string>
+    <string name="username">Όνομα χρήστη</string>
+    <string name="register">Εγγραφή</string>
+    <string name="email">email</string>
+    <string name="confirmPassword">Επιβεβαίωση Κωδικού</string>
+    <string name="goToRegisterMessage">Δεν έχετε λογαριασμό; Πατήστε εδώ για να εγγραφείτε</string>
+    <string name="goToLoginMessage">Έχετε ήδη λογαριασμό; Πατήστε εδώ για να συνδεθείτε</string>
+    <string name="app_logo_message">Λογότυπο εφαρμογής</string>
+    <string name="full_name">Ονοματεπώνυμο</string>
+    <string name="u_personal_info"><u>Προσωπικές Πληροφορίες</u></string>
+    <string name="u_account_info"><u>Πληροφορίες Λογαριασμού</u></string>
+    <string name="email_invalid">Το email δεν είναι έγκυρο</string>
+    <string name="password_invalid_detailed">Το μήκος του κωδικού πρέπει να αποτελείται από 8 μέχρι 15 χαρακτήρες και να περιέχει τουλάχιστον ένα ψηφίο, ειδικό χαρακτήρα, μικρό και κεφαλαίο γράμμα και να μην περιέχει κενά</string>
+    <string name="username_invalid">Μη έγκυρη μορφή ονόματος χρήστη</string>
+    <string name="username_invalid_detailed">Το όνομα χρήστη πρέπει να αποτελείται από 6 μέχρι 30 αλφαριθμητικούς χαρακτήρες και κάτω παύλες (_).</string>
+    <string name="password_invalid">Μη έγκυρη μορφή κωδικού</string>
+    <string name="passwords_dont_match">Οι κωδικοί δεν ταιριάζουν</string>
+    <string name="registration_success">Ο χρήστης έχει εγγραφεί</string>
+    <string name="registration_failed">Η εγγραφή απέτυχε!</string>
+    <string name="logout">Αποσύνδεση</string>
+    <string name="monitor">Έναρξη καταγραφής</string>
+    <string name="in_vehicle">Οδήγηση</string>
+    <string name="on_bicycle">Ποδηλασία</string>
+    <string name="on_foot">Όρθιος</string>
+    <string name="running">Τρέξιμο</string>
+    <string name="still">Σταθερός</string>
+    <string name="tilting">Tilting</string>
+    <string name="unknown">Άγνωστο</string>
+    <string name="walking">Περπάτημα</string>
+    <string name="unidentifiable_activity">Απροσδιόριστη δραστηριότητα</string>
+
+    <string name="activity_updates_enabled">Η ενημέρωση δραστηριοτήτων ενεργοποιήθηκε</string>
+    <string name="activity_updates_not_enabled">Αποτυχία ενεργοποίησης ενημέρωσης δραστηριοτήτων</string>
+    <string name="activity_updates_removed">Η ενημέρωση δραστηριοτήτων απενεργοποιήθηκε</string>
+    <string name="activity_updates_not_removed">Αποτυχία απενεργοποίησης ενημέρωσης δραστηριοτήτων</string>
+
+    <string name="percent">%1$d%%</string>
+    <string name="stop_monitoring">Τερματισμός Καταγραφής</string>
+    <string name="records_firebaseTableName">Records</string>
+</resources>

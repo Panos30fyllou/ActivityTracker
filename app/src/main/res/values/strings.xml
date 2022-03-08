@@ -12,7 +12,6 @@
     <string name="full_name">Full Name</string>
     <string name="u_personal_info"><u>Personal Info</u></string>
     <string name="u_account_info"><u>Account Info</u></string>
-    <string name="comments">Comments</string>
     <string name="email_invalid">Email is invalid</string>
     <string name="password_invalid_detailed">Password length must consist of 8 to 15 characters and contain at least one digit, special character, lowercase and uppercase letter and not contain any spaces</string>
     <string name="username_invalid">Invalid username form</string>

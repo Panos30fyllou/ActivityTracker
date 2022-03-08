@@ -18,6 +18,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <ImageButton
+            android:id="@+id/language"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_margin="10dp"
+            android:background="@drawable/circle"
+            android:backgroundTint="@color/white"
+            android:onClick="changeLanguage"
+            android:padding="8dp"
+            android:src="@drawable/ic_baseline_language_24"
+            app:tint="@color/blue_500"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="352dp"
+            tools:layout_editor_absoluteY="10dp" />
+
+
         <ImageButton
             android:id="@+id/profileButton"
             android:layout_width="50dp"
@@ -36,6 +54,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <ListView
+        android:layout_margin="20dp"
         android:id="@+id/detected_activities_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -61,28 +61,12 @@ public class StoredActivitiesAdapter extends ArrayAdapter<StoredActivity> {
         ProgressBar progressBar = view.findViewById(R.id.stored_activity_progress_bar);
 
         if (storedActivity != null) {
-            activityName.setText(storedActivity.getType() + ": " + storedActivity.getSeconds() + "s");
-            activityPercentage.setText(getContext().getString(R.string.percent, storedActivity.getSeconds() / totalTime));
-            progressBar.setProgress(Integer.parseInt(String.valueOf(storedActivity.getSeconds() / totalTime)));
+            long seconds = storedActivity.getSeconds();
+            activityName.setText(Utils.getActivityString(getContext(), storedActivity.getType()) + ": " + (seconds < 60 ? (seconds + "s") : seconds / 60 + "m, " + seconds % 60 + "s"));
+            int percentage = Math.round((float) seconds / totalTime * 100);
+            activityPercentage.setText(getContext().getString(R.string.percent, (percentage)));
+            progressBar.setProgress(Integer.parseInt(String.valueOf(percentage)));
         }
         return view;
     }
-
-    //public void updateActivities(ArrayList<DetectedActivity> detectedActivities) {
-    //    HashMap<Integer, Integer> detectedActivitiesMap = new HashMap<>();
-    //    for (DetectedActivity activity : detectedActivities) {
-    //        detectedActivitiesMap.put(activity.getType(), activity.getConfidence());
-    //    }
-//
-    //    ArrayList<DetectedActivity> tempList = new ArrayList<>();
-    //    for (int i = 0; i < Constants.MONITORED_ACTIVITIES.length; i++) {
-    //        int confidence = detectedActivitiesMap.containsKey(Constants.MONITORED_ACTIVITIES[i]) ? detectedActivitiesMap.get(Constants.MONITORED_ACTIVITIES[i]) : 0;
-    //        tempList.add(new DetectedActivity(Constants.MONITORED_ACTIVITIES[i], confidence));
-    //    }
-//
-    //    this.clear();
-    //    for (DetectedActivity detectedActivity: tempList) {
-    //        this.add(detectedActivity);
-    //    }
-    //}
-}//
+}

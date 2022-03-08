@@ -15,6 +15,29 @@ public class Utils {
 
     private Utils() {}
 
+    public static String getActivityString(Context context, String name){
+        Resources resources = context.getResources();
+        switch(name) {
+            case "inVehicle":
+                return resources.getString(R.string.in_vehicle);
+            case "onBicycle":
+                return resources.getString(R.string.on_bicycle);
+            case "onFoot":
+                return resources.getString(R.string.on_foot);
+            case "running":
+                return resources.getString(R.string.running);
+            case "still":
+                return resources.getString(R.string.still);
+            case "tilting":
+                return resources.getString(R.string.tilting);
+            case "unknown":
+                return resources.getString(R.string.unknown);
+            case "walking":
+                return resources.getString(R.string.walking);
+            default:
+                return resources.getString(R.string.unidentifiable_activity);
+        }
+    }
     public static String getActivityString(Context context, int detectedActivityType) {
         Resources resources = context.getResources();
         switch(detectedActivityType) {
