@@ -7,6 +7,22 @@
     android:orientation="vertical"
     tools:context=".activities.LoginActivity">
 
+    <ImageButton
+        android:id="@+id/language"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="left"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/white"
+        android:onClick="changeLanguage"
+        android:padding="8dp"
+        android:src="@drawable/ic_baseline_language_24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/blue_500"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <LinearLayout
         android:id="@+id/titleLinearLayout"
@@ -77,7 +93,7 @@
                 android:minHeight="48dp"
                 android:focusedByDefault="true"
                 android:drawableTint="@color/blue_700"
-                android:textColor="@color/white"/>
+                android:textColor="@color/blue_500"/>
 
             <EditText
                 android:id="@+id/passwordEditText"
@@ -92,7 +108,7 @@
                 android:maxLines="1"
                 android:minHeight="48dp"
                 android:drawableTint="@color/blue_700"
-                android:textColor="@color/white"/>
+                android:textColor="@color/blue_500"/>
 
             <TextView
                 android:id="@+id/goToRegisterTextView"

@@ -21,7 +21,7 @@
     <string name="registration_success">User has been registered</string>
     <string name="registration_failed">Registration failed!</string>
     <string name="logout">Logout</string>
-    <string name="monitor">Start Monitoring</string>
+    <string name="track">Start Tracking</string>
     <string name="in_vehicle">In Vehicle</string>
     <string name="on_bicycle">On Bicycle</string>
     <string name="on_foot">On Foot</string>
@@ -38,6 +38,9 @@
     <string name="activity_updates_not_removed">Failed to remove activity updates</string>
 
     <string name="percent">%1$d%%</string>
-    <string name="stop_monitoring">Stop Monitoring</string>
+    <string name="stop_tracking">Stop Tracking</string>
     <string name="records_firebaseTableName">Records</string>
+    <string name="no_record_found">No record found</string>
+    <string name="tracking_on">Activity Tracking is ON</string>
+    <string name="tracking_off">Activity Tracking is OFF</string>
 </resources>

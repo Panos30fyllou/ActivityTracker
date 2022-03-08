@@ -2,7 +2,9 @@ package com.example.activitytracker.activities;
 
 import static com.example.activitytracker.validators.Validators.isEditTextFilled;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
@@ -12,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.activitytracker.R;
+import com.example.activitytracker.helpers.LanguageHelper;
 import com.example.activitytracker.models.State;
 import com.example.activitytracker.models.User;
 import com.example.activitytracker.navigators.Navigator;
@@ -23,6 +26,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.Locale;
 import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
@@ -34,23 +38,20 @@ public class LoginActivity extends AppCompatActivity {
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setLocale(LanguageHelper.getLanguagePreference(this));
         setContentView(R.layout.activity_login);
 
-        emailEditText = findViewById(R.id.emailEditText);
-        passwordEditText = findViewById(R.id.passwordEditText);
-        progressBar = findViewById(R.id.progressBarLogin);
+        findUI();
     }
 
     public void loginClicked(View v) {
+        String email = isEditTextFilled(emailEditText) ? emailEditText.getText().toString() : null;
+        if (email == null) return;
+        String password = isEditTextFilled(passwordEditText) ? passwordEditText.getText().toString() : null;
+        if (password == null) return;
 
-        //String email = isEditTextFilled(emailEditText) ? emailEditText.getText().toString() : null;
-        //if (email == null) return;
-        //String password = isEditTextFilled(passwordEditText) ? passwordEditText.getText().toString() : null;
-        //if (password == null) return;
-//
-        //if (validateCredentials(email, password))
-        //    firebaseLogin(email, password);
-        firebaseLogin("panos30fyllou@gmail.com", "panos1234");
+        if (validateCredentials(email, password))
+            firebaseLogin(email, password);
     }
 
     private void firebaseLogin(String email, String password) {
@@ -95,5 +96,21 @@ public class LoginActivity extends AppCompatActivity {
 
     public void goToRegister(View v) {
         Navigator.goToRegister(this);
+    }
+
+    private void findUI() {
+        emailEditText = findViewById(R.id.emailEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        progressBar = findViewById(R.id.progressBarLogin);
+    }
+
+    public void changeLanguage(View view) {
+        setLocale(LanguageHelper.getLanguagePreference(this).equals("en") ? "el" : "en");
+        recreate();
+    }
+
+    private void setLocale(String locale) {
+        getBaseContext().getResources().updateConfiguration(LanguageHelper.getNewConfig(locale), getBaseContext().getResources().getDisplayMetrics());
+        LanguageHelper.setLanguagePreference(this, locale);
     }
 }

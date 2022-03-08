@@ -7,8 +7,8 @@
     <string name="register">Εγγραφή</string>
     <string name="email">email</string>
     <string name="confirmPassword">Επιβεβαίωση Κωδικού</string>
-    <string name="goToRegisterMessage">Δεν έχετε λογαριασμό; Πατήστε εδώ για να εγγραφείτε</string>
-    <string name="goToLoginMessage">Έχετε ήδη λογαριασμό; Πατήστε εδώ για να συνδεθείτε</string>
+    <string name="goToRegisterMessage">Δεν έχετε λογαριασμό; \n Πατήστε εδώ για να εγγραφείτε</string>
+    <string name="goToLoginMessage">Έχετε ήδη λογαριασμό; \n Πατήστε εδώ για να συνδεθείτε</string>
     <string name="app_logo_message">Λογότυπο εφαρμογής</string>
     <string name="full_name">Ονοματεπώνυμο</string>
     <string name="u_personal_info"><u>Προσωπικές Πληροφορίες</u></string>
@@ -22,7 +22,7 @@
     <string name="registration_success">Ο χρήστης έχει εγγραφεί</string>
     <string name="registration_failed">Η εγγραφή απέτυχε!</string>
     <string name="logout">Αποσύνδεση</string>
-    <string name="monitor">Έναρξη καταγραφής</string>
+    <string name="track">Έναρξη καταγραφής</string>
     <string name="in_vehicle">Οδήγηση</string>
     <string name="on_bicycle">Ποδηλασία</string>
     <string name="on_foot">Όρθιος</string>
@@ -39,6 +39,9 @@
     <string name="activity_updates_not_removed">Αποτυχία απενεργοποίησης ενημέρωσης δραστηριοτήτων</string>
 
     <string name="percent">%1$d%%</string>
-    <string name="stop_monitoring">Τερματισμός Καταγραφής</string>
+    <string name="stop_tracking">Τερματισμός Καταγραφής</string>
     <string name="records_firebaseTableName">Records</string>
+    <string name="no_record_found">Δεν βρέθηκαν δεδομένα</string>
+    <string name="tracking_off">Η καταγραφή δραστηριοτήτων είναι απενεργοποιημένη</string>
+    <string name="tracking_on">Η καταγραφή δραστηριοτήτων είναι ενεργοποιημένη</string>
 </resources>

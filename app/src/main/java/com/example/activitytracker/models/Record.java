@@ -14,6 +14,15 @@ public class Record {
     private long tilting;
 
     public Record(){
+        this.Username = State.user.getUsername();
+        this.onBicycle = 0;
+        this.onFoot = 0;
+        this.walking = 0;
+        this.tilting = 0;
+        this.unidentifiable = 0;
+        this.unknown = 0;
+        this.running = 0;
+        this.still = 0;
 
     }
     public Record(String username, long InVehicle, long OnFoot, long OnBicycle, long Running, long Still, long Unknown, long Walking, long Unidentifiable, long Tilting) {

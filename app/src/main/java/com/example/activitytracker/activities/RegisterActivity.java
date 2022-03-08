@@ -2,6 +2,7 @@ package com.example.activitytracker.activities;
 
 import static com.example.activitytracker.validators.Validators.isEditTextFilled;
 
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.activitytracker.R;
+import com.example.activitytracker.helpers.LanguageHelper;
 import com.example.activitytracker.models.User;
 import com.example.activitytracker.navigators.Navigator;
 import com.example.activitytracker.validators.Validators;
@@ -17,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -26,29 +29,20 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText usernameEditText;
     private EditText passwordEditText;
     private EditText confirmPasswordEditText;
-
     ArrayList<EditText> registerFormEditTexts;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setLocale(LanguageHelper.getLanguagePreference(this));
         setContentView(R.layout.activity_register);
 
-        registerFormEditTexts = new ArrayList<>();
+        findUI();
+        registerFormEditTextsToList();
+        addRegisterFormListeners();
+    }
 
-        fullNameEditText = findViewById(R.id.fullNameEditText);
-        emailEditText = findViewById(R.id.emailEditText);
-        usernameEditText = findViewById(R.id.usernameEditText);
-        passwordEditText = findViewById(R.id.passwordEditText);
-        confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
-
-        registerFormEditTexts.add(fullNameEditText);
-        registerFormEditTexts.add(emailEditText);
-        registerFormEditTexts.add(usernameEditText);
-        registerFormEditTexts.add(passwordEditText);
-        registerFormEditTexts.add(confirmPasswordEditText);
-
+    private void addRegisterFormListeners() {
         for (EditText editText : registerFormEditTexts) {
             editText.setOnFocusChangeListener((view, b) -> {
                 if (!b && isEditTextFilled((EditText) view)) {
@@ -71,6 +65,23 @@ public class RegisterActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    private void registerFormEditTextsToList() {
+        registerFormEditTexts = new ArrayList<>();
+        registerFormEditTexts.add(fullNameEditText);
+        registerFormEditTexts.add(emailEditText);
+        registerFormEditTexts.add(usernameEditText);
+        registerFormEditTexts.add(passwordEditText);
+        registerFormEditTexts.add(confirmPasswordEditText);
+    }
+
+    private void findUI() {
+        fullNameEditText = findViewById(R.id.fullNameEditText);
+        emailEditText = findViewById(R.id.emailEditText);
+        usernameEditText = findViewById(R.id.usernameEditText);
+        passwordEditText = findViewById(R.id.passwordEditText);
+        confirmPasswordEditText = findViewById(R.id.confirmPasswordEditText);
     }
 
     public void registerClicked(View v) {
@@ -126,5 +137,15 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void goToLogin(View v) {
         Navigator.goToLogin(this);
+    }
+
+    public void changeLanguage(View view) {
+        setLocale(LanguageHelper.getLanguagePreference(this).equals("en") ? "el" : "en");
+        recreate();
+    }
+
+    private void setLocale(String locale) {
+        getBaseContext().getResources().updateConfiguration(LanguageHelper.getNewConfig(locale), getBaseContext().getResources().getDisplayMetrics());
+        LanguageHelper.setLanguagePreference(this, locale);
     }
 }
