@@ -43,4 +43,5 @@
     <string name="no_record_found">No record found</string>
     <string name="tracking_on">Activity Tracking is ON</string>
     <string name="tracking_off">Activity Tracking is OFF</string>
+    <string name="hello">Hello, </string>
 </resources>

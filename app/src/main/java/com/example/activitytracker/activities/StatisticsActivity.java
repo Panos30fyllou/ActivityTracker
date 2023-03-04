@@ -52,7 +52,7 @@ public class StatisticsActivity extends AppCompatActivity {
 
         if(State.user == null)
             finishAffinity();
-        greetingTextView.setText("Hello, " + State.user.getFullName());
+        greetingTextView.setText(new StringBuilder().append(getString(R.string.hello)).append(State.user.getFullName()).toString());
         storedActivities = new ArrayList<>();
         recordsTable = FirebaseDatabase.getInstance().getReference().child(getString(R.string.records_firebaseTableName)).child(State.user.getUsername());
 

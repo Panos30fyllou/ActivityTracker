@@ -179,7 +179,6 @@ public class MainActivity extends AppCompatActivity implements SharedPreferences
                         break;
                     case DetectedActivity.STILL:
                         State.record.setStill(stopwatch.elapsed(TimeUnit.SECONDS));
-                        //Toast.makeText(this, String.valueOf(State.record.getStill()), Toast.LENGTH_SHORT).show();
                         break;
                     case DetectedActivity.WALKING:
                         State.record.setWalking(stopwatch.elapsed(TimeUnit.SECONDS));

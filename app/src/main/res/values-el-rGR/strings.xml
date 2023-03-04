@@ -44,4 +44,5 @@
     <string name="no_record_found">Δεν βρέθηκαν δεδομένα</string>
     <string name="tracking_off">Η καταγραφή δραστηριοτήτων είναι απενεργοποιημένη</string>
     <string name="tracking_on">Η καταγραφή δραστηριοτήτων είναι ενεργοποιημένη</string>
+    <string name="hello">Γεια, </string>
 </resources>
